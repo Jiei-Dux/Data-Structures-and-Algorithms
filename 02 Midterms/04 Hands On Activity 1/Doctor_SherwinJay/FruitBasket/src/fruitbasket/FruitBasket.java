@@ -60,12 +60,6 @@ public class FruitBasket {
     // ========== // ========== // ========== // ========== // ========== // ========== //
 
 
-    static int numOfFruit;
-
-
-    // ========== // ========== // ========== // ========== // ========== // ========== //
-
-
     static void startingPrompt() {
         println("Catch and eat any of these fruits: [ 'Apple' | 'Orange' | 'Mango' | 'Guava' ]");
     }
@@ -77,12 +71,15 @@ public class FruitBasket {
 
     // ========== // ========== // ========== // ========== // ========== // ========== //
 
+    static int numOfFruit, MaxFruitNum;
+
 
     static void fruitNum() {
         Scanner fruitNumScanner = new Scanner(System.in);
 
         print("Enter the number of fruits you would like to catch: ");
         numOfFruit = fruitNumScanner.nextInt();
+        MaxFruitNum = numOfFruit;
     }
 
     static void chooseFruit() {
@@ -95,26 +92,30 @@ public class FruitBasket {
         print("M. Mango\n");
         print("G. Guava\n");
         
+        int FruitNum = 1;
+        
         do {
 
-            String chosenFruit = chooseFruitScanner.nextLine();
-
-            if ( chosenFruit == "a" | chosenFruit == "A" ) {
+            print("Fruit " + FruitNum + " of " + MaxFruitNum + ": " );
+            char chosenFruit = chooseFruitScanner.nextLine().charAt(0);
+            
+            if ( chosenFruit == 'a' | chosenFruit == 'A' ) {
                 basket.push("Apple");
             }
-
-            if ( chosenFruit == "o" | chosenFruit == "O" ) {
+            
+            if ( chosenFruit == 'o' | chosenFruit == 'O' ) {
                 basket.push("Orange");
             }
 
-            if ( chosenFruit == "m" | chosenFruit == "M" ) {
+            if ( chosenFruit == 'm' | chosenFruit == 'M' ) {
                 basket.push("Mango");
             }
 
-            if ( chosenFruit == "g" | chosenFruit == "G" ) {
+            if ( chosenFruit == 'g' | chosenFruit == 'G' ) {
                 basket.push("Guava");
             }
-
+            
+            FruitNum++;
             numOfFruit--;
 
         } while ( numOfFruit != 0 );
