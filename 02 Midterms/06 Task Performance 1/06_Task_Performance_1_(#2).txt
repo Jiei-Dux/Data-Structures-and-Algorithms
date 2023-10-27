@@ -1,0 +1,14 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                                                             *
+ * Notepad Answers                                             *
+ * 06 Task Performance 1 - 06_Task_Performance_1_(#2).java     *
+ * Data Structures and Algorithm                               *
+ * @author https://github.com/Jiei-Dux                         *
+ *                                                             *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+Determine the PARENT NODES, LEAF NODES, and SIBLINGS.
+
+  PARENT NODES { (A) , (C) , (D) , (G) }
+  LEAD NODES { (B) , (F) , (K) , (L) , (H) , (I) , (J) }
+  SIBLINGS { ( B , C , D ) , ( F , G ) , ( K , L ) , ( H , I , J ) }

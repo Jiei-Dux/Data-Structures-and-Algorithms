@@ -27,6 +27,7 @@ import static java.lang.System.*;
 public class TaskPerformance1 {
     
     // ----- // --- Variables START --- // ----- //
+    
     static Queue<String> queue = new LinkedList<>();
     
     static Stack stack = new Stack();
@@ -35,10 +36,13 @@ public class TaskPerformance1 {
     
     static int BookNum = 1;
     static int BookNumm = 4;
+    
     // ----- // --- Variables END --- // ----- //
     
     
     
+    
+    // ----- // --- Print START --- // ----- //
     
     static void print(Object cmdLine) {
         out.print(cmdLine);
@@ -47,6 +51,13 @@ public class TaskPerformance1 {
     static void println(Object cmdLine) {
         out.println(cmdLine);
     }
+    
+    // ----- // --- Print END --- // ----- //
+    
+    
+    
+    
+    // ----- // --- Main Prompt END --- // ----- //
     
     static void bookPrompt() {
         
@@ -70,24 +81,39 @@ public class TaskPerformance1 {
         
         } while ( BookNumm > 0 );
     }
+    
+    // ----- // --- Main Prompt END --- // ----- //
 
+    
+    
+    
+    // ----- // --- Main Method START --- // ----- //
+    
     public static void main(String[] args) {
         
         bookPrompt();
         popBook();
+        
         if(stack.isEmpty()) {
+            
             try {
                 
-                println("\n\nStack is now empty\n\n");
+                println("\n\nStack is now empty\n");
                 Thread.sleep(1000);
                 
-            } catch ( Exception e ) {
-            
+                println("Displaying queue:");
+                Thread.sleep(1000);
                 
-            
+                println(queue);
+                
+            } catch ( InterruptedException e ) {
+                print(e);
             }
+            
         }
         
     }
+    
+    // ----- // --- Main Method END --- // ----- //
     
 }
