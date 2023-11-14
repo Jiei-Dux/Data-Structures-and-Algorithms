@@ -35,8 +35,8 @@ public class SetsExample {
         out.flush();
     }
 
-    static void ERROR() {
-        print("Something happend...");
+    static void ERROR(Object cmdLine) {
+        print("Something happend bro...\n" + cmdLine);
     }
     
     static void ENTER() {
@@ -82,7 +82,7 @@ public class SetsExample {
             System.in.read();
             
         } catch ( IOException e ) {
-            ERROR();
+            ERROR(e);
         }
 
     }
@@ -122,7 +122,7 @@ public class SetsExample {
             System.in.read();
             
         } catch ( IOException e ) {
-            ERROR();
+            ERROR(e);
         }
 
     }
@@ -162,7 +162,7 @@ public class SetsExample {
             System.in.read();
             
         } catch ( IOException e ) {
-            ERROR();
+            ERROR(e);
         }
         
     }
@@ -198,7 +198,7 @@ public class SetsExample {
                         print(SetImpl);
                         readUserInput = scanInput.nextLine();
                     } catch ( InterruptedException e ) {
-                        ERROR();
+                        ERROR(e);
                     }
                 }
             
@@ -229,7 +229,7 @@ public class SetsExample {
         } while ( CONDITION == true );
             
         } catch ( Exception e ) {
-            ERROR();
+            ERROR(e);
         }
          
     }
