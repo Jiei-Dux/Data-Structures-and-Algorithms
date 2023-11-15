@@ -51,15 +51,17 @@ public class SetsExample {
 
         try {
             
-            Set<String> HashA = new HashSet<>();
-            Set<String> HashB = new HashSet<>();
+            Set<Integer> HashA = new HashSet<>();
+            Set<Integer> HashB = new HashSet<>();
 
-            Collections.addAll(HashA, "This", "Is", "A", "Sentence");
-            Collections.addAll(HashB, "This", "The", "Second", "Sentence");
+            //Collections.addAll(HashA, "This", "Is", "The", "Sentence");
+            //Collections.addAll(HashB, "Its", "The", "Second", "Sentence");
+            Collections.addAll(HashA, 5, 3, 9, 7);
+            Collections.addAll(HashB, 4, 3, 5, 2);
 
-            Set<String> union = new HashSet<>(HashA);
-            Set<String> inter = new HashSet<>(HashA);
-            Set<String> diff = new HashSet<>(HashA);
+            Set<Integer> union = new HashSet<>(HashA);
+            Set<Integer> inter = new HashSet<>(HashA);
+            Set<Integer> diff = new HashSet<>(HashA);
 
             union.addAll(HashB);
             inter.retainAll(HashB);
@@ -91,15 +93,17 @@ public class SetsExample {
 
         try {
             
-            Set<String> TreeA = new TreeSet<>();
-            Set<String> TreeB = new TreeSet<>();
+            Set<Integer> TreeA = new TreeSet<>();
+            Set<Integer> TreeB = new TreeSet<>();
 
-            Collections.addAll(TreeA, "This", "Is", "A", "Sentence");
-            Collections.addAll(TreeB, "This", "The", "Second", "Sentence");
+            /*Collections.addAll(TreeA, "This", "Is", "The", "Sentence");
+            Collections.addAll(TreeB, "Its", "The", "Second", "Sentence");*/
+            Collections.addAll(TreeA, 5, 3, 9, 7);
+            Collections.addAll(TreeB, 4, 3, 5, 2);
 
-            Set<String> union = new TreeSet<>(TreeA);
-            Set<String> inter = new TreeSet<>(TreeA);
-            Set<String> diff = new TreeSet<>(TreeA);
+            Set<Integer> union = new TreeSet<>(TreeA);
+            Set<Integer> inter = new TreeSet<>(TreeA);
+            Set<Integer> diff = new TreeSet<>(TreeA);
 
             union.addAll(TreeB);
             inter.retainAll(TreeB);
@@ -131,15 +135,17 @@ public class SetsExample {
 
         try {
             
-            Set<String> LHashA = new LinkedHashSet<>();
-            Set<String> LHashB = new LinkedHashSet<>();
+            Set<Integer> LHashA = new LinkedHashSet<>();
+            Set<Integer> LHashB = new LinkedHashSet<>();
 
-            Collections.addAll(LHashA, "This", "Is", "A", "Sentence");
-            Collections.addAll(LHashB, "This", "The", "Second", "Sentence");
+            //Collections.addAll(LHashA, "This", "Is", "The", "Sentence");
+            //Collections.addAll(LHashB, "Its", "The", "Second", "Sentence");
+            Collections.addAll(LHashA, 5, 3, 9, 7);
+            Collections.addAll(LHashB, 4, 3, 5, 2);
 
-            Set<String> union = new TreeSet<>(LHashA);
-            Set<String> inter = new TreeSet<>(LHashA);
-            Set<String> diff = new TreeSet<>(LHashA);
+            Set<Integer> union = new TreeSet<>(LHashA);
+            Set<Integer> inter = new TreeSet<>(LHashA);
+            Set<Integer> diff = new TreeSet<>(LHashA);
 
             union.addAll(LHashB);
             inter.retainAll(LHashB);
