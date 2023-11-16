@@ -18,13 +18,9 @@ public class SetsExample {
     // ========== // ========== // ========== // ========== // ========== //
     
     
-    static void print(Object cmdLine) {
-        out.print(cmdLine);
-    }
+    static void print(Object cmdLine) { out.print(cmdLine); }
 
-    static void println(Object cmdLine) {
-        out.println(cmdLine);
-    }
+    static void println(Object cmdLine) { out.println(cmdLine); }
             
             
     // ========== // ========== // ========== // ========== // ========== //
@@ -35,13 +31,9 @@ public class SetsExample {
         out.flush();
     }
 
-    static void ERROR(Object cmdLine) {
-        print("Something happend bro...\n" + cmdLine);
-    }
+    static void ERROR(Object cmdLine) { print("Something happend bro...\n" + cmdLine); }
     
-    static void ENTER() {
-        print("\n\nPress <ENTER> to Continue...");
-    }
+    static void ENTER() { print("\n\nPress <ENTER> to Continue..."); }
 
     
     // ========== // SET IMPLEMENTATIONS // ========== //
@@ -51,17 +43,17 @@ public class SetsExample {
 
         try {
             
-            Set<Integer> HashA = new HashSet<>();
-            Set<Integer> HashB = new HashSet<>();
+            Set<Object> HashA = new HashSet<>();
+            Set<Object> HashB = new HashSet<>();
 
-            //Collections.addAll(HashA, "This", "Is", "The", "Sentence");
-            //Collections.addAll(HashB, "Its", "The", "Second", "Sentence");
-            Collections.addAll(HashA, 5, 3, 9, 7);
-            Collections.addAll(HashB, 4, 3, 5, 2);
+            Collections.addAll(HashA, "This", "Is", "The", "Sentence");
+            Collections.addAll(HashB, "Its", "The", "Second", "Sentence");
+            // Collections.addAll(HashA, 5, 3, 9, 7);
+            // Collections.addAll(HashB, 4, 3, 5, 2);
 
-            Set<Integer> union = new HashSet<>(HashA);
-            Set<Integer> inter = new HashSet<>(HashA);
-            Set<Integer> diff = new HashSet<>(HashA);
+            Set<Object> union = new HashSet<>(HashA);
+            Set<Object> inter = new HashSet<>(HashA);
+            Set<Object> diff = new HashSet<>(HashA);
 
             union.addAll(HashB);
             inter.retainAll(HashB);
@@ -70,22 +62,16 @@ public class SetsExample {
             println(HashA);
             println(HashB);
 
-            print("\n");
-
-            println("Union: " + union);
+            println("\nUnion: " + union);
             println("Intersection: " + inter);
             println("Difference: " + diff);
 
-            print("\n");
-
-            println(HashA.containsAll(HashB));
+            println("\n" + HashA.containsAll(HashB));
             
             ENTER();
             System.in.read();
             
-        } catch ( IOException e ) {
-            ERROR(e);
-        }
+        } catch ( IOException e ) { ERROR(e); }
 
     }
 
@@ -93,17 +79,17 @@ public class SetsExample {
 
         try {
             
-            Set<Integer> TreeA = new TreeSet<>();
-            Set<Integer> TreeB = new TreeSet<>();
+            Set<Object> TreeA = new TreeSet<>();
+            Set<Object> TreeB = new TreeSet<>();
 
-            /*Collections.addAll(TreeA, "This", "Is", "The", "Sentence");
-            Collections.addAll(TreeB, "Its", "The", "Second", "Sentence");*/
-            Collections.addAll(TreeA, 5, 3, 9, 7);
-            Collections.addAll(TreeB, 4, 3, 5, 2);
+            Collections.addAll(TreeA, "This", "Is", "The", "Sentence");
+            Collections.addAll(TreeB, "Its", "The", "Second", "Sentence");
+            // Collections.addAll(TreeA, 5, 3, 9, 7);
+            // Collections.addAll(TreeB, 4, 3, 5, 2);
 
-            Set<Integer> union = new TreeSet<>(TreeA);
-            Set<Integer> inter = new TreeSet<>(TreeA);
-            Set<Integer> diff = new TreeSet<>(TreeA);
+            Set<Object> union = new TreeSet<>(TreeA);
+            Set<Object> inter = new TreeSet<>(TreeA);
+            Set<Object> diff = new TreeSet<>(TreeA);
 
             union.addAll(TreeB);
             inter.retainAll(TreeB);
@@ -112,22 +98,16 @@ public class SetsExample {
             println(TreeA);
             println(TreeB);
 
-            print("\n");
-
-            println("Union: " + union);
+            println("\nUnion: " + union);
             println("Intersection: " + inter);
             println("Difference: " + diff);
             
-            print("\n");
-            
-            println(TreeA.containsAll(TreeB));
+            println("\n" + TreeA.containsAll(TreeB));
             
             ENTER();
             System.in.read();
             
-        } catch ( IOException e ) {
-            ERROR(e);
-        }
+        } catch ( IOException e ) { ERROR(e); }
 
     }
 
@@ -135,17 +115,17 @@ public class SetsExample {
 
         try {
             
-            Set<Integer> LHashA = new LinkedHashSet<>();
-            Set<Integer> LHashB = new LinkedHashSet<>();
+            Set<Object> LHashA = new LinkedHashSet<>();
+            Set<Object> LHashB = new LinkedHashSet<>();
 
-            //Collections.addAll(LHashA, "This", "Is", "The", "Sentence");
-            //Collections.addAll(LHashB, "Its", "The", "Second", "Sentence");
-            Collections.addAll(LHashA, 5, 3, 9, 7);
-            Collections.addAll(LHashB, 4, 3, 5, 2);
+            Collections.addAll(LHashA, "This", "Is", "The", "Sentence");
+            Collections.addAll(LHashB, "Its", "The", "Second", "Sentence");
+            // Collections.addAll(LHashA, 5, 3, 9, 7);
+            // Collections.addAll(LHashB, 4, 3, 5, 2);
 
-            Set<Integer> union = new TreeSet<>(LHashA);
-            Set<Integer> inter = new TreeSet<>(LHashA);
-            Set<Integer> diff = new TreeSet<>(LHashA);
+            Set<Object> union = new TreeSet<>(LHashA);
+            Set<Object> inter = new TreeSet<>(LHashA);
+            Set<Object> diff = new TreeSet<>(LHashA);
 
             union.addAll(LHashB);
             inter.retainAll(LHashB);
@@ -154,22 +134,16 @@ public class SetsExample {
             println(LHashA);
             println(LHashB);
 
-            print("\n");
-
-            println("Union: " + union);
+            println("\nUnion: " + union);
             println("Intersection: " + inter);
             println("Difference: " + diff);
 
-            print("\n");
-
-            println(LHashA.containsAll(LHashB));
+            println("\n" + LHashA.containsAll(LHashB));
         
             ENTER();
             System.in.read();
             
-        } catch ( IOException e ) {
-            ERROR(e);
-        }
+        } catch ( IOException e ) { ERROR(e); }
         
     }
 
@@ -186,9 +160,9 @@ public class SetsExample {
             do {
 
                 String SetImpl = "SET IMPLEMENTATIONS:\n";
-                SetImpl += "    a. HASH SET\n";
-                SetImpl += "    b. TREE SET\n";
-                SetImpl += "    c. LINKED HASH SET\n";
+                SetImpl += "    a. HASH\n";
+                SetImpl += "    b. TREE\n";
+                SetImpl += "    c. LINKED HASH\n";
                 SetImpl += "    q. Quit\n";
                 SetImpl += "\n\nPICK ONE: ";
             
@@ -197,46 +171,44 @@ public class SetsExample {
                 String readUserInput = scanInput.nextLine();
             
                 while ( readUserInput.equals("") || readUserInput.equals(" ") ) {
+
                     try {
                         print("Input something bro...");
                         Thread.sleep(1000);
                         clearConsole();
                         print(SetImpl);
                         readUserInput = scanInput.nextLine();
-                    } catch ( InterruptedException e ) {
-                        ERROR(e);
-                    }
+                    } catch ( InterruptedException e ) { ERROR(e); }
+
                 }
             
                 char usrInput = readUserInput.charAt(0);
 
-            if ( usrInput == 'a' || usrInput == 'A' ) {
-                clearConsole();
-                println("HASH SET");
-                HASH();
-            }
+                if ( usrInput == 'a' || usrInput == 'A' ) {
+                    clearConsole();
+                    println("HASH SET");
+                    HASH();
+                }
 
-            if ( usrInput == 'b' || usrInput == 'B' ) {
-                clearConsole();
-                println("TREE SET");
-                TREE();
-            }
+                if ( usrInput == 'b' || usrInput == 'B' ) {
+                    clearConsole();
+                    println("TREE SET");
+                    TREE();
+                }
 
-            if ( usrInput == 'c' || usrInput == 'C' ) {
-                clearConsole();
-                println("LINKEDHASH SET");
-                LINKEDHASH();
-            }
+                if ( usrInput == 'c' || usrInput == 'C' ) {
+                    clearConsole();
+                    println("LINKEDHASH SET");
+                    LINKEDHASH();
+                }
             
-            if ( usrInput == 'q' || usrInput == 'Q' ) {
-                CONDITION = false;
-            }
+                if ( usrInput == 'q' || usrInput == 'Q' ) {
+                    CONDITION = false;
+                }
             
-        } while ( CONDITION == true );
+            } while ( CONDITION == true );
             
-        } catch ( Exception e ) {
-            ERROR(e);
-        }
+        } catch ( Exception e ) { ERROR(e); }
          
     }
 
@@ -244,8 +216,6 @@ public class SetsExample {
     // ========== // ========== // ========== // ========== // ========== //
     
     
-    public static void main(String[] args) {
-        MainMenu();
-    }
+    public static void main(String[] args) { MainMenu(); }
 
 } 
