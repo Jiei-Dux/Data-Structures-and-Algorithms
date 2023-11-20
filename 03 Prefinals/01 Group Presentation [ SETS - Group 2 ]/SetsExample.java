@@ -84,8 +84,8 @@ public class SetsExample {
 
             Collections.addAll(TreeA, "This", "Is", "The", "Sentence");
             Collections.addAll(TreeB, "Its", "The", "Second", "Sentence");
-            // Collections.addAll(TreeA, 5, 3, 9, 7);
             // Collections.addAll(TreeB, 4, 3, 5, 2);
+            // Collections.addAll(TreeA, 5, 3, 9, 7);
 
             Set<Object> union = new TreeSet<>(TreeA);
             Set<Object> inter = new TreeSet<>(TreeA);
@@ -118,6 +118,12 @@ public class SetsExample {
             Set<Object> LHashA = new LinkedHashSet<>();
             Set<Object> LHashB = new LinkedHashSet<>();
 
+/*
+            LHashA.add("This");
+            LHashA.add("This");
+            LHashA.add("This");
+            LHashA.add("This");
+            LHashA.add("This");*/
             Collections.addAll(LHashA, "This", "Is", "The", "Sentence");
             Collections.addAll(LHashB, "Its", "The", "Second", "Sentence");
             // Collections.addAll(LHashA, 5, 3, 9, 7);
