@@ -173,11 +173,13 @@ public class SetsExample {
                 while ( readUserInput.equals("") || readUserInput.equals(" ") ) {
 
                     try {
+
                         print("Input something bro...");
                         Thread.sleep(1000);
                         clearConsole();
                         print(SetImpl);
                         readUserInput = scanInput.nextLine();
+
                     } catch ( InterruptedException e ) { ERROR(e); }
 
                 }
