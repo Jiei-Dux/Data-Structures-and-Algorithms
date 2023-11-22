@@ -1,0 +1,149 @@
+OK! so what were about to do next is like doing a recap
+while using our Java Program example.
+
+btw, sorry if may sudden interruptions or anything
+just got back from the hospital kanina so... yeah... moving oooon~
+
+
+
+
+mkay~ Set Implementations~
+
+So, based on the handouts:
+Java has 3 general-purpose set implementations that're
+inside the package java.util, namely Hash, Tree, and LinkedHash
+
+And just additional information about SETS, sets does not accept
+duplicates as that is its signature property.
+
+so moving onto Hash which will be discussed by vitug...
+
+<VITUG>
+
+aight, so for Tree
+
+Tree is like Hash, only difference is the way the set,
+I mean elements, is being organized.
+
+like as u can see here, Tree has the elements in alphabetical
+order, while in hash, just like vitug said, its in
+random order. like, the order is randomly generated.
+
+and if the elements are integers instead, then
+the sets are going to appear in numerical order, obviously.
+
+this is for the Tree
+if the elements are in string or character, then the sets
+are going to appear in alphabetical order,
+
+if its in integers, then the
+sets are going to appear in numerical order. got it?
+
+now moving onto LinkedHash
+
+LinkedHash, once again, is like Hash and Tree, elements are
+going to be outputted in the same way, yada yada
+
+only difference is, the way the elements are organized.
+
+In LinkedHash, the elements are going to be organized in the
+order the elements are added.
+
+Like, as you can see here, the elements in SetA are added
+in this order: This, Is, The, Sentence.
+
+While in SetB: Its, The, Second, Sentence
+
+once the set is displayed, then itll appear as is,
+
+SetA is going to have This as the first element, Is second,
+and so and so.
+
+Same with SetB, Its first, The second, and so and so.
+
+Hash can also organize elements, but only 'til character 0,
+if the element reached character 1, then that element will
+end up in a random place, like somewhere in the set, be it
+front, back, middle, just random.
+
+
+
+
+Now onto the part of how to use these set implementations
+and set operations:
+
+you first off create two empty sets
+the comparand and the comparator
+by typing:
+    Set<data type> string, integer, whatever, or if you
+    intend to mix elements onto this set, like its going
+    to have strings, integers, and so, youll use the
+    data type Object, as u can see.
+
+    then whatever you decide to name that set.
+    then "= new *type of set implementation you used*"
+    then these <>();
+    thats just step one.
+
+now step two is adding elements onto the set by using
+either one of the two:
+
+    if you wanna torture yourself, use this:
+        SetName.add(firstElementHere);
+        SetName.add(second);
+        and so and so
+
+    but if you want the easy way, use this:
+        Collections.addAll
+        (SetName, firstElementHere, Second, and so and so);
+
+now if you want to use the one of the setImpl onto your set
+do this:
+
+    make another set by:
+        Set<data type> name = new setImp<>(setA);
+
+    and then you use the new sets as a meedium to compare
+    the first set and the second set
+
+    for union:
+        you do:
+            unionSetName.addAll(SetB);
+
+        addAll because just like what we said
+        Union combines 2ndSet elements with
+        the 1stSet elements.
+
+    for intersection:
+        you do:
+            interSetName.retainAll(SetB);
+
+        retainAll because it will check every SetA's elements
+        and if SetB got a duplicate in SetA, it will
+        retain those duplicate elements and remove the
+        elements that doesnt have duplicates.
+
+    for difference:
+        you do:
+            diffSetName.removeAll(SetB);
+
+        removeAll because it will check every SetA's elements
+        and if SetA contains elements that you cannot find in
+        SetB, then it will retain or keep those elements and
+        remove the elements that can be found on SetA but not
+        in SetB.
+
+    for subset:
+        you do
+            SetA_Name.containsAll(SetB_Name);
+
+        this will only output true or false. it will return
+        false if SetB does not contain EVERY element of SetA.
+        as u can see.
+
+        it will however, return true, if SetB contains EVERY
+        element of SetA. doesnt matter if SetB contains
+        elements that isnt on SetA, as long as SetB contains
+        EVERY element of SetA, then it will return true
+
+and I think that is all folks...
